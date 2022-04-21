@@ -1,0 +1,78 @@
+:root {
+    --pramarey-color: #ff8109;
+}
+
+li, a, button {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--pramarey-color);
+}
+
+img {
+    margin: 4px ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(18, 18, 24, 0.952);
+    margin-bottom: 7.5rem;
+}
+.logo {
+    margin-left: 5%;
+}
+
+.ul-nav {
+    list-style: none;
+    display: inline-flex;
+    margin-right: 10%;
+}
+
+.ul-nav li {
+    padding: auto 20px;
+}
+
+.ul-nav li a {
+    transition: all 0.3s ease 0s;
+    display: inline-flex;
+    padding: auto 15px;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+}
+
+.ul-nav li a:hover {
+    background: green;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+    padding: 9px 25px;
+    background: rgb(0, 136, 167, 1);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background: rgb(0, 136, 167, 0.8);
+}

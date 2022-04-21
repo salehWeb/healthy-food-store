@@ -1,0 +1,123 @@
+.form-perant {
+    display: flex;
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    width: 50%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.form input {
+    width: 100%;
+    border: none;
+    height: 100%;
+    color: rgb(51, 51, 51);
+    padding-top: 20px;
+    outline: none;
+    position: absolute;
+    top: -2px;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 0.5px solid black;
+}
+
+.form label::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 0.5px solid aqua;
+    transform: translateX(-100%);
+    transition: all 0.25s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.35s ease;
+}
+
+.form input:focus+.label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: aqua;
+}
+
+.form input:focus+.label-name::after,
+.form input:valid+.label-name::after {
+    transform: translateX(0%);
+}
+
+/* .file {
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+} */
+
+.filePerant {
+    position: relative;
+}
+
+.file  {
+    background-color: grey;
+    display: flex;
+    width: 90px;
+    height: 40px;
+    align-items: center;
+    padding: 5px 5px 0;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: -150px;
+    left: 50px;
+}
+
+.file .file_icon {
+    background-color: grey;
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+.file input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    cursor: pointer !important;
+    opacity: 0;
+}
+
+.img img {
+width: 120px;
+height: 90px;
+position: absolute;
+top: -100px;
+left: 35px;
+border-radius: 100px;
+}
