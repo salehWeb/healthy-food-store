@@ -59,7 +59,8 @@ const Item = ({ item }) => {
 
     const handelAddToCart = () => {
         const prisyes = bases * item.pricey
-        localStorage.setItem(`${item._id}`, JSON.stringify({ bases, prisyes }))
+        const key = item._id
+        localStorage.setItem(`${item._id}`, JSON.stringify({ bases, prisyes, key }))
         return (
             Swal.fire({
                 position: 'center',

@@ -367,6 +367,12 @@ const useStyles = makeStyles((theme) => ({
             duration: theme.transitions.duration.leavingScreen,
         }),
     },
+
+    tabs: {
+        [theme.breakpoints.up('sm')]: {
+            minWidth: "100px !important",
+        },
+    },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
         transition: theme.transitions.create(['margin', 'width'], {
@@ -449,10 +455,7 @@ export default function Nav() {
         return () => window.removeEventListener("resize", handleResize);
     }, [width]);
 
-    console.log(width);
-
-
-const [tabVaule, setTabVaule] = React.useState(1)
+    const [tabVaule, setTabVaule] = React.useState(1)
 
 
 
@@ -471,7 +474,7 @@ const [tabVaule, setTabVaule] = React.useState(1)
                         Foods
                     </Typography>
 
-                    {width < 555 ? (
+                    {width < 460 ? (
                         <>
                             <IconButton
                                 color="inherit"
@@ -484,11 +487,11 @@ const [tabVaule, setTabVaule] = React.useState(1)
                             </IconButton>
                         </>
                     ) : (
-                        <Tabs textColor='inherit' value={tabVaule} onChange={(e, value) =>  setTabVaule(value)} indicatorColor='secondary'>
-                            <Tab label='Home'  onClick={handelHomeRoute } />
-                            <Tab label='Topic' onClick={handelTopicRoute } />
-                            <Tab label='Login' onClick={handelLoginRoute} />
-                            <Tab label='Cart' onClick={handelCartRoute} />
+                        <Tabs textColor='inherit' value={tabVaule} onChange={(e, value) => setTabVaule(value)} indicatorColor='secondary'>
+                            <Tab className={classes.tabs} label='Home' onClick={handelHomeRoute} />
+                            <Tab className={classes.tabs} label='Topic' onClick={handelTopicRoute} />
+                            <Tab className={classes.tabs} label='Login' onClick={handelLoginRoute} />
+                            <Tab className={classes.tabs} label='Cart' onClick={handelCartRoute} />
                         </Tabs>
                     )}
 

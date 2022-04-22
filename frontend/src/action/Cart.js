@@ -19,3 +19,13 @@ export const PostData = (form) => async (dispatch) => {
         console.log(error)
     }
 }
+
+export const getCartWith_ID = (ids) => async (dispatch) => {
+    try {
+        const { data } = await api.getCartWith_ID(ids)
+        console.log(data)
+        dispatch({ type: 'get', payload: data })
+    } catch (error) {
+        console.log(error)
+    }
+}

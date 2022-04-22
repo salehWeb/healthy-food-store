@@ -4,6 +4,8 @@ const reducer = (state = null, action) => {
             return  action.payload;
         case 'second':
             return state ;
+            case 'get':
+                return  action.payload ;
         default:
             return state
     }
